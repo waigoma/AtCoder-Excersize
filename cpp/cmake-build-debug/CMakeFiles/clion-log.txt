@@ -1,0 +1,4 @@
+C:\Users\waiwa\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\221.5080.224\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/waiwa/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5080.224/bin/ninja/win/ninja.exe -G Ninja -S C:\Programming\Hosei\Project-2022-s\cpp -B C:\Programming\Hosei\Project-2022-s\cpp\cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Programming/Hosei/Project-2022-s/cpp/cmake-build-debug

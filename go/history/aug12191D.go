@@ -20,15 +20,32 @@ func main() {
 	y, _ := strconv.ParseFloat(str[1], 64)
 	r, _ := strconv.ParseFloat(str[2], 64)
 
+	if x > y {
+		x, y = y, x
+	}
+
 	count := 0
 
 	_ceil, _floor := calcCeilFloor(x, r)
-	fmt.Println("ceil: ", _ceil, " floor: ", _floor)
 
 	for i := _ceil; i <= _floor; i++ {
 		newPoint := math.Sqrt(math.Pow(r, 2) - math.Pow(x-i, 2))
+
+		if newPoint == 0 {
+			if math.Floor(y) == y {
+				count++
+			}
+			continue
+		}
+
 		_bottom, _top := calcCeilFloor(y, newPoint)
 		count += int(math.Abs(_top-_bottom)) + 1
+
+		if math.Abs(_bottom-_top) == r*2 {
+			if math.Floor(x) != x {
+				count -= 2
+			}
+		}
 	}
 
 	fmt.Println(count)
